@@ -1,0 +1,22 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+class Circle:
+    def __init__(self, ban_kinh):
+        """
+        Hàm khởi tạo để xây dựng đối tượng Circle từ bán kính.
+        :param ban_kinh: Bán kính của hình tròn.
+        """
+        self.ban_kinh = ban_kinh
+
+    def tinh_dien_tich(self):
+        """
+        Hàm tính diện tích của hình tròn.
+        :return: Diện tích của hình tròn.
+        """
+        dien_tich = 3.14159 * (self.ban_kinh ** 2)
+        return dien_tich
+
+hinh_tron = Circle(5)
+
+dien_tich = hinh_tron.tinh_dien_tich()
+
+print(f"Diện tích của hình tròn có bán kính {hinh_tron.ban_kinh} là: {dien_tich}")
