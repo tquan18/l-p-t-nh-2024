@@ -1,0 +1,12 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+ho_va_ten = input("Nhập tên đầy đủ của bạn: ")
+
+danh_sach_ten = ho_va_ten.split()
+
+if len(danh_sach_ten) >= 2:
+    ho = danh_sach_ten[0]  # Phần họ là phần tử đầu tiên
+    ten_rieng = " ".join(danh_sach_ten[1:])  # Tên riêng là các phần tử còn lại
+    print("Họ:", ho)
+    print("Tên riêng:", ten_rieng)
+else:
+    print("Vui lòng nhập đầy đủ họ và tên.")
