@@ -1,0 +1,7 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+danh_sach = ['apple', 'banana', 'orange']
+
+danh_sach.remove('banana')
+
+print("Danh sách sau khi bỏ phần tử 'banana':")
+print(danh_sach)
