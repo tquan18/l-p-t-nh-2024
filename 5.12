@@ -1,0 +1,17 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+import numpy as np
+
+Student_id = np.array([1023, 5202, 6230, 1671, 1682, 5241, 4532])
+Student_height = np.array([40., 42., 45., 41., 38., 40., 42.0])
+
+indices = np.lexsort((Student_height,))
+
+print("Chỉ số:")
+print(indices)
+
+sorted_student_id = Student_id[indices]
+sorted_student_height = Student_height[indices]
+
+print("\nDữ liệu sắp xếp:")
+for i in range(len(sorted_student_id)):
+    print(f"{sorted_student_id[i]:<20} {sorted_student_height[i]}")
