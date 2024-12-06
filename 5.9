@@ -1,0 +1,39 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+def binary_search(arr, x):
+    """
+    Hàm tìm kiếm nhị phân trong danh sách arr.
+    Trả về True nếu tìm thấy, False nếu không tìm thấy.
+    """
+    left = 0
+    right = len(arr) - 1
+
+    while left <= right:
+        mid = left + (right - left) // 2
+
+        # Kiểm tra nếu x nằm ở giữa
+        if arr[mid] == x:
+            return True
+        
+        # Nếu x lớn hơn, bỏ qua nửa trái
+        elif arr[mid] < x:
+            left = mid + 1
+        
+        # Nếu x nhỏ hơn, bỏ qua nửa phải
+        else:
+            right = mid - 1
+    return False
+
+import search_utils
+
+input_string = input("Nhập danh sách các số đã được sắp xếp (cách nhau bởi dấu phẩy): ")
+
+dlist = list(map(int, input_string.split(',')))
+
+value = int(input("Nhập phần tử cần tìm kiếm: "))
+
+ket_qua = search_utils.binary_search(dlist, value)
+
+if ket_qua:
+    print(f"Phần tử {value} có trong danh sách")
+else:
+    print(f"Phần tử {value} không có trong danh sách")
