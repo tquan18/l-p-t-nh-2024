@@ -1,0 +1,19 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+def chia_het_cho_5(binary_string):
+  
+    binary_numbers = binary_string.split(',')
+    
+    divisible_by_5 = []
+    
+    for binary in binary_numbers:
+        decimal = int(binary, 2)  # Chuyển đổi số nhị phân sang số thập phân
+        if decimal % 5 == 0:  # Kiểm tra xem số thập phân có chia hết cho 5 không
+            divisible_by_5.append(binary)
+    
+    return ','.join(divisible_by_5)
+
+binary_input = input("Nhập chuỗi các số nhị phân 4 chữ số (cách nhau bởi dấu phẩy): ")
+
+result = chia_het_cho_5(binary_input)
+print("Các số nhị phân chia hết cho 5 là:")
+print(result)
