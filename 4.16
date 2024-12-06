@@ -1,0 +1,8 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+input_string = input("Nhập chuỗi các số nhị phân (cách nhau bởi dấu phẩy): ")
+
+danh_sach_nhi_phan = input_string.split(',')
+
+print("Những giá trị nhị phân được nhập:")
+for nhi_phan in danh_sach_nhi_phan:
+    print(nhi_phan.strip())
