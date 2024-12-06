@@ -1,0 +1,18 @@
+print(sinh viên:le trung quan MSSV:235752021610009)def fibonacci(limit):
+    fib_list = [1, 2]
+    while True:
+        next_fib = fib_list[-1] + fib_list[-2]
+        if next_fib >= limit:
+            break
+        fib_list.append(next_fib)
+    return fib_list
+
+def sum_even_fibonacci(fib_list):
+    """Hàm tính tổng các số chẵn trong dãy số Fibonacci"""
+    return sum(x for x in fib_list if x % 2 == 0)
+limit = 4000000
+fib_list = fibonacci(limit)
+print("Dãy số Fibonacci nhỏ hơn 4.000.000:")
+print(fib_list)
+total_even = sum_even_fibonacci(fib_list)
+print(f"Tổng các số chẵn trong dãy Fibonacci là: {total_even}")
