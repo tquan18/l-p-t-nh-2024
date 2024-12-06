@@ -1,0 +1,29 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+def may_tinh(a, b, phep_tinh):
+    """
+    Hàm thực hiện các phép tính đơn giản.
+    :param a: Số thứ nhất
+    :param b: Số thứ hai
+    :param phep_tinh: Phép tính ('+', '-', '*', '/')
+    :return: Kết quả của phép tính
+    """
+    if phep_tinh == '+':
+        return a + b
+    elif phep_tinh == '-':
+        return a - b
+    elif phep_tinh == '*':
+        return a * b
+    elif phep_tinh == '/':
+        if b != 0:
+            return a / b
+        else:
+            return "Lỗi: Không thể chia cho 0"
+    else:
+        return "Phép tính không hợp lệ"
+
+try:
+    a = float(input("Nhập số thứ nhất: "))
+    b = float(input("Nhập số thứ hai: "))
+    phep_tinh = input("Nhập phép tính ('+', '-', '*', '/'): ")
+    
+    ket
