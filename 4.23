@@ -1,0 +1,22 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+def dem_chu_cai_va_chu_so(cau):
+  
+    so_chu_cai = 0
+    so_chu_so = 0
+    
+    for char in cau:
+        if char.isalpha():
+            so_chu_cai += 1
+        elif char.isdigit():
+            so_chu_so += 1
+    
+    return so_chu_cai, so_chu_so
+
+cau = input("Nhập một câu: ")
+
+# Gọi hàm và nhận kết quả
+so_chu_cai, so_chu_so = dem_chu_cai_va_chu_so(cau)
+
+# In kết quả
+print(f"Số chữ cái là: {so_chu_cai}")
+print(f"Số chữ số là: {so_chu_so}")
