@@ -1,0 +1,14 @@
+print(sinh viên:le trung quan MSSV:235752021610009)
+def ket_noi_danh_sach(keys, values):
+    # Tạo từ điển từ các khóa và các giá trị
+    dictionary = dict(zip(keys, values))
+    return dictionary
+
+keys = ["khóa1", "khóa2", "khóa3"]
+values = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+result = ket_noi_danh_sach(keys, values)
+
+print("Từ điển sau khi kết nối các danh sách:")
+print(result)
+uan MSSV:235752021610009)
