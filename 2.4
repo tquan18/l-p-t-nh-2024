@@ -1,0 +1,12 @@
+print(sinh viên:le trung quan MSSV:235752021610009)
+# Hàm in ra số nghịch đảo dưới dạng thập phân của một dãy số tự nhiên trong khoảng (a, b)
+def in_so_nghich_dao(a, b):
+    # Kiểm tra đầu vào để đảm bảo a nhỏ hơn b
+    if a >= b:
+        print("Giá trị đầu vào không hợp lệ. Giá trị a phải nhỏ hơn b.")
+        return
+    
+    # Lặp qua từng số trong khoảng (a, b)
+    for i in range(a, b + 1):
+        nghich_dao = 1 / i
+        print(f"Số nghịch đảo của {i} là:
