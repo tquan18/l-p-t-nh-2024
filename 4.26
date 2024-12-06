@@ -1,0 +1,19 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+def tinh_so_tien_thuc(nhat_ky):
+  
+    for giao_dich in nhat_ky:
+        if giao_dich[0] == 'D':
+            so_tien += int(giao_dich[1])
+        elif giao_dich[0] == 'W':
+            so_tien -= int(giao_dich[1])
+    return so_tien
+
+nhat_ky_giao_dich = []
+while True:
+    giao_dich = input("Nhập giao dịch (D số tiền hoặc W số tiền, nhập 'exit' để kết thúc): ")
+    if giao_dich.lower() == 'exit':
+        break
+    nhat_ky_giao_dich.append(giao_dich.split())
+
+ket_qua = tinh_so_tien_thuc(nhat_ky_giao_dich)
+print(f"Số tiền thực trong tài khoản là: {ket_qua}")
