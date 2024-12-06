@@ -1,0 +1,22 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+def sang_eratosthenes(max_number):
+    """
+    Hàm sử dụng thuật toán Sàng Eratosthenes để tìm tất cả các số nguyên tố nhỏ hơn max_number.
+    """
+    primes = [True] * max_number
+    p = 2
+    while p * p < max_number:
+        if primes[p]:
+            for i in range(p * p, max_number, p):
+                primes[i] = False
+        p += 1
+    prime_numbers = [p for p in range(2, max_number) if primes[p]]
+    return prime_numbers
+
+max_number = 1000000
+prime_numbers_list = sang_eratosthenes(max_number)
+
+P = tuple(prime_numbers_list)
+
+print("Tuple P gồm các số nguyên tố nhỏ hơn 1 triệu:")
+print(P)
