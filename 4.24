@@ -1,0 +1,17 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+def dem_chu_hoa_va_chu_thuong(cau):
+    
+    for char in cau:
+        if char.isupper():
+            so_chu_hoa += 1
+        elif char.islower():
+            so_chu_thuong += 1
+    
+    return so_chu_hoa, so_chu_thuong
+
+cau = input("Nhập một câu: ")
+
+so_chu_hoa, so_chu_thuong = dem_chu_hoa_va_chu_thuong(cau)
+
+print(f"Số chữ hoa là: {so_chu_hoa}")
+print(f"Số chữ thường là: {so_chu_thuong}")
