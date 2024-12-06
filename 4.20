@@ -1,0 +1,28 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+def pascal_triangle(n):
+    """
+    Hàm in n dòng đầu tiên của tam giác Pascal.
+    :param n: Số dòng của tam giác Pascal.
+    """
+    triangle = []
+
+    for i in range(n):
+        row = [1]  # Dòng đầu tiên luôn là 1
+        if triangle:  # Nếu tam giác không rỗng, tạo dòng tiếp theo
+            last_row = triangle[-1]
+            row.extend([sum(pair) for pair in zip(last_row, last_row[1:])])
+            row.append(1)
+        triangle.append(row)
+
+    for row in triangle:
+        print(row)
+
+try:
+    n = int(input("Nhập số nguyên n: "))
+    if n > 0:
+        print(f"{n} dòng đầu tiên của tam giác Pascal là:")
+        pascal_triangle(n)
+    else:
+        print("Vui lòng nhập một số nguyên dương lớn hơn 0.")
+except ValueError:
+    print("Giá trị nhập vào không hợp lệ. Vui lòng nhập số nguyên.")
