@@ -1,0 +1,26 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+import math
+
+def tinh_khoang_cach():
+    x, y = 0, 0  # Vị trí ban đầu của robot là (0,0)
+    
+    lenh_di_chuyen = ["UP 5", "DOWN 3", "LEFT 3", "RIGHT 3"]
+    
+    for lenh in lenh_di_chuyen:
+        huong, buoc = lenh.split()
+        buoc = int(buoc)
+        
+        if huong == "UP":
+            y += buoc
+        elif huong == "DOWN":
+            y -= buoc
+        elif huong == "LEFT":
+            x -= buoc
+        elif huong == "RIGHT":
+            x += buoc
+    
+    khoang_cach = math.sqrt(x**2 + y**2)
+    
+    print(f"Khoảng cách từ vị trí hiện tại đến vị trí đầu tiên: {round(khoang_cach)}")
+
+tinh_khoang_cach()
