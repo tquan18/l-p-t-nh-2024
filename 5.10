@@ -1,0 +1,26 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+def bubbleSort(nlist):
+    """
+    Hàm sắp xếp nổi bọt (Bubble Sort).
+    :param nlist: Danh sách các phần tử cần sắp xếp.
+    :return: Danh sách đã được sắp xếp.
+    """
+    for passnum in range(len(nlist)-1, 0, -1):
+        for i in range(passnum):
+            if nlist[i] > nlist[i+1]:
+                # Hoán đổi vị trí của hai phần tử
+                temp = nlist[i]
+                nlist[i] = nlist[i+1]
+                nlist[i+1] = temp
+    return nlist
+
+import sort_utils
+
+input_string = input("Nhập danh sách các số (cách nhau bởi dấu phẩy): ")
+
+nlist = list(map(int, input_string.split(',')))
+
+nlist_sorted = sort_utils.bubbleSort(nlist)
+
+print("Danh sách sau khi sắp xếp:")
+print(nlist_sorted)
