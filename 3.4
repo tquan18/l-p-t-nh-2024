@@ -1,0 +1,20 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+bien_toan_cuc = "Đây là biến toàn cục"
+
+def ham_vi_du():
+    bien_cuc_bo = "Đây là biến cục bộ"
+    
+    print(bien_cuc_bo)
+    
+    print(bien_toan_cuc)
+    
+    global bien_toan_cuc
+    bien_toan_cuc = "Giá trị biến toàn cục đã thay đổi"
+
+ham_vi_du()
+print(bien_toan_cuc)
+
+try:
+    print(bien_cuc_bo)
+except NameError:
+    print("Biến cục bộ không thể truy cập ngoài phạm vi của hàm")
