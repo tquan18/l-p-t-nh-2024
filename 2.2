@@ -1,0 +1,20 @@
+print(sinh viên:le trung quan MSSV:235752021610009)
+ import math
+
+def tinh_khoang_cach(x1, y1, x2, y2):
+    """Hàm tính khoảng cách giữa hai điểm (x1, y1) và (x2, y2)"""
+    return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+# Nhập tọa độ của điểm thứ nhất
+x1 = float(input("Nhập tọa độ x của điểm thứ nhất: "))
+y1 = float(input("Nhập tọa độ y của điểm thứ nhất: "))
+
+# Nhập tọa độ của điểm thứ hai
+x2 = float(input("Nhập tọa độ x của điểm thứ hai: "))
+y2 = float(input("Nhập tọa độ y của điểm thứ hai: "))
+
+# Tính khoảng cách giữa hai điểm
+khoang_cach = tinh_khoang_cach(x1, y1, x2, y2)
+
+# In kết quả
+print(f"Khoảng cách giữa hai điểm ({x1}, {y1}) và ({x2}, {y2}) là: {khoang_cach:.2f}")
