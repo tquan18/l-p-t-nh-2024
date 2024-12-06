@@ -1,0 +1,12 @@
+print(sinh viên:le trung quan MSSV:235752021610009)
+input_string = input("Nhập một xâu ký tự: ")
+
+words = input_string.split()
+
+print("Danh sách các từ sau khi tách:")
+print(words)
+
+output_string = " ".join(words)
+
+print("Xâu ký tự mới sau khi nhập:")
+print(output_string)
