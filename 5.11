@@ -1,0 +1,17 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+dtype = np.dtype([('ten', 'U20'), ('chieu_cao', 'f4'), ('lop', 'U10')])
+
+sinh_vien = np.array([
+    ('Nguyen Van A', 1.70, '10A1'),
+    ('Tran Thi B', 1.65, '10A2'),
+    ('Le Van C', 1.80, '10A1'),
+    ('Hoang Thi D', 1.60, '10A3'),
+    ('Nguyen Thi E', 1.75, '10A2')
+], dtype=dtype)
+sinh_vien_sap_xep = np.sort(sinh_vien, order=['lop', 'chieu_cao'])
+
+print("Mảng ban đầu:")
+print(sinh_vien)
+
+print("\nMảng đã sắp xếp theo lớp và chiều cao:")
+print(sinh_vien_sap_xep)
