@@ -1,0 +1,16 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+def kiem_tra_chan_le(number):
+    """
+    Hàm kiểm tra số chẵn hay lẻ.
+    :param number: Số nguyên cần kiểm tra.
+    """
+    if number % 2 == 0:
+        print("Đây là một số chẵn")
+    else:
+        print("Đây là một số lẻ")
+
+try:
+    so = int(input("Nhập một số nguyên: "))
+    kiem_tra_chan_le(so)
+except ValueError:
+    print("Giá trị nhập vào không hợp lệ. Vui lòng nhập một số nguyên.")
