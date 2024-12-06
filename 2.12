@@ -1,0 +1,22 @@
+print(sinh viên:le trung quan MSSV:235752021610009)
+def kiem_tra_mat_khau(password):
+    """
+    Hàm kiểm tra tính hợp lệ của mật khẩu.
+    :param password: Mật khẩu cần kiểm tra.
+    :return: True nếu mật khẩu hợp lệ, False nếu không hợp lệ.
+    """
+    if (6 <= len(password) <= 12
+        and re.search("[A-Z]", password)
+        and re.search("[a-z]", password)
+        and re.search("[0-9]", password)
+        and re.search("[$#@]", password)):
+        return True
+    return False
+
+ten_nguoi_dung = input("Nhập tên người dùng: ")
+mat_khau = input("Nhập mật khẩu: ")
+
+if kiem_tra_mat_khau(mat_khau):
+    print("Mật khẩu hợp lệ.")
+else:
+    print("Mật khẩu không hợp lệ. Mật khẩu phải chứa từ 6 đến 12 ký tự, bao gồm ít nhất một chữ cái viết hoa, một chữ cái thường, một chữ số và một ký tự đặc biệt ($, #, @).")
