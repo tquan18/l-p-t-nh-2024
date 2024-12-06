@@ -1,0 +1,24 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+class Hinhchunhat:
+    def __init__(self, chieu_dai, chieu_rong):
+        """
+        Hàm khởi tạo để xây dựng đối tượng Hinhchunhat từ chiều dài và chiều rộng.
+        :param chieu_dai: Chiều dài của hình chữ nhật.
+        :param chieu_rong: Chiều rộng của hình chữ nhật.
+        """
+        self.chieu_dai = chieu_dai
+        self.chieu_rong = chieu_rong
+
+    def tinh_dien_tich(self):
+        """
+        Hàm tính diện tích của hình chữ nhật.
+        :return: Diện tích của hình chữ nhật.
+        """
+        dien_tich = self.chieu_dai * self.chieu_rong
+        return dien_tich
+
+hinh_chu_nhat = Hinhchunhat(10, 5)
+
+dien_tich = hinh_chu_nhat.tinh_dien_tich()
+
+print(f"Diện tích của hình chữ nhật có chiều dài {hinh_chu_nhat.chieu_dai} và chiều rộng {hinh_chu_nhat.chieu_rong} là: {dien_tich}")
