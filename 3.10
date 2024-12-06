@@ -1,0 +1,29 @@
+print(sinh viên:le trung quan MSSV:"235752021610009")
+import math
+
+def Tinh(R):
+    """
+    Hàm tính chu vi và diện tích hình tròn với bán kính R.
+    :param R: Bán kính của hình tròn.
+    :return: Chu vi và diện tích của hình tròn.
+    """
+    if R <= 0:
+        return "Bán kính không hợp lệ. Vui lòng nhập giá trị lớn hơn 0."
+    
+    chu_vi = 2 * math.pi * R
+    dien_tich = math.pi * R**2
+    
+    return chu_vi, dien_tich
+
+try:
+    R = float(input("Nhập bán kính của hình tròn: "))
+    
+    ket_qua = Tinh(R)
+    if isinstance(ket_qua, tuple):
+        chu_vi, dien_tich = ket_qua
+        print(f"Chu vi của hình tròn là: {chu_vi:.2f}")
+        print(f"Diện tích của hình tròn là: {dien_tich:.2f}")
+    else:
+        print(ket_qua)
+except ValueError:
+    print("Giá trị nhập vào không hợp lệ. Vui lòng nhập một số thực.")
