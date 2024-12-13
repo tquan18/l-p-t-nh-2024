@@ -1,0 +1,25 @@
+Print("Ho Va Ten :Lê Trung Quân mssv:235752021610009:)
+class Chuoi:
+    def __init__(self):
+        """
+        Hàm khởi tạo để xây dựng đối tượng Chuoi.
+        """
+        self.chuoi = ""
+
+    def get_String(self):
+        """
+        Phương thức chấp nhận một chuỗi từ người dùng.
+        """
+        self.chuoi = input("Nhập một chuỗi: ")
+
+    def print_String(self):
+        """
+        Phương thức in chuỗi bằng chữ in hoa.
+        """
+        print(self.chuoi.upper())
+
+chuoi_doi_tuong = Chuoi()
+
+chuoi_doi_tuong.get_String()
+
+chuoi_doi_tuong.print_String()
