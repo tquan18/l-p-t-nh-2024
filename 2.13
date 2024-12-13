@@ -1,12 +1,5 @@
 print(sinh viên:le trung quan MSSV:235752021610009)
-def giai_phuong_trinh_bac_hai(a, b, c):
-    """
-    Hàm giải phương trình bậc hai ax^2 + bx + c = 0
-    :param a: Hệ số bậc hai
-    :param b: Hệ số bậc nhất
-    :param c: Hệ số tự do
-    :return: Nghiệm của phương trình
-    """
+def giai_phuong_trinh_bac_hai(a, b, c)
     if a == 0:
         if b == 0:
             return "Phương trình vô nghiệm" if c != 0 else "Phương trình vô số nghiệm"
