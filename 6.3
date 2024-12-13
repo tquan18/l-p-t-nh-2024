@@ -1,0 +1,34 @@
+print("họ và tên : Lê Trung Quân MSSV:235752021610009")
+class Nguoi:
+    def __init__(self, ten):
+        """
+        Hàm khởi tạo để xây dựng đối tượng Nguoi.
+        :param ten: Tên của người.
+        """
+        self.ten = ten
+
+    def getGender(self):
+        """
+        Hàm in giới tính của người. Đây là phương thức ảo, sẽ được ghi đè ở các lớp con.
+        """
+        pass
+
+class Nam(Nguoi):
+    def getGender(self):
+        """
+        Hàm in giới tính của người là Nam.
+        """
+        return "Nam"
+
+class Nu(Nguoi):
+    def getGender(self):
+        """
+        Hàm in giới tính của người là Nữ.
+        """
+        return "Nữ"
+
+nguoi_nam = Nam("Nguyen Van A")
+nguoi_nu = Nu("Tran Thi B")
+
+print(f"{nguoi_nam.ten}: {nguoi_nam.getGender()}")
+print(f"{nguoi_nu.ten}: {nguoi_nu.getGender()}")
