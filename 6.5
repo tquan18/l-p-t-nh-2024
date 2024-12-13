@@ -1,0 +1,23 @@
+Print("Ho Va Ten :Lê Trung Quân mssv:235752021610009:)
+class ReverseString:
+    def __init__(self, chuoi):
+        """
+        Hàm khởi tạo để xây dựng đối tượng ReverseString từ chuỗi.
+        :param chuoi: Chuỗi cần đảo ngược từ từng chữ.
+        """
+        self.chuoi = chuoi
+
+    def dao_nguoc_tu(self):
+        """
+        Hàm đảo ngược từng từ trong chuỗi.
+        :return: Chuỗi với các từ đã được đảo ngược.
+        """
+        tu_dao_nguoc = [tu[::-1] for tu in self.chuoi.split()]
+        return ' '.join(tu_dao_nguoc)
+
+chuoi_dau_vao = 'hello .py'
+reverse_string = ReverseString(chuoi_dau_vao)
+
+chuoi_dao_nguoc = reverse_string.dao_nguoc_tu()
+
+print(f"Chuỗi sau khi đảo ngược từ từng chữ: '{chuoi_dao_nguoc}'")
