@@ -1,0 +1,32 @@
+Print("Ho Va Ten :Lê Trung Quân mssv:235752021610009:)
+class Circle:
+    def __init__(self, ban_kinh):
+        """
+        Hàm khởi tạo để xây dựng đối tượng Circle từ bán kính.
+        :param ban_kinh: Bán kính của hình tròn.
+        """
+        self.ban_kinh = ban_kinh
+
+    def tinh_dien_tich(self):
+        """
+        Hàm tính diện tích của hình tròn.
+        :return: Diện tích của hình tròn.
+        """
+        dien_tich = 3.14159 * (self.ban_kinh ** 2)
+        return dien_tich
+
+    def tinh_chu_vi(self):
+        """
+        Hàm tính chu vi của hình tròn.
+        :return: Chu vi của hình tròn.
+        """
+        chu_vi = 2 * 3.14159 * self.ban_kinh
+        return chu_vi
+
+hinh_tron = Circle(5)
+
+dien_tich = hinh_tron.tinh_dien_tich()
+chu_vi = hinh_tron.tinh_chu_vi()
+
+print(f"Diện tích của hình tròn có bán kính {hinh_tron.ban_kinh} là: {dien_tich}")
+print(f"Chu vi của hình tròn có bán kính {hinh_tron.ban_kinh} là: {chu_vi}")
