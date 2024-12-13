@@ -1,0 +1,19 @@
+Print("Ho Va Ten :Lê Trung Quân mssv:235752021610009:)
+class ATM:
+    def __init__(self, so_du_ban_dau):
+        """
+        Hàm khởi tạo để xây dựng đối tượng ATM với số dư ban đầu.
+        :param so_du_ban_dau: Số dư ban đầu của tài khoản.
+        """
+        self.so_du = so_du_ban_dau
+
+    def kiem_tra_so_du(self):
+        """
+        Phương thức kiểm tra số dư của tài khoản.
+        """
+        print(f"Số dư hiện tại của bạn là: {self.so_du} VND")
+
+    def gui_tien(self, so_tien):
+        """
+        Phương thức gửi tiền vào tài khoản.
+        :param so_tien: Số tiền muốn gửi.
